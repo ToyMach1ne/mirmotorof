@@ -1,0 +1,39 @@
+$rb-font-path: '../fonts' !default;
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/LatoRegular.eot');
+  src: local('Lato Regular'),
+  local('LatoRegular'),
+  url('#{$rb-font-path}/LatoRegular.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/LatoRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/LatoBold.eot');
+  src: local('Lato Bold'),
+  local('LatoBold'),
+  url('#{$rb-font-path}/LatoBold.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/LatoBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/LatoBoldItalic.eot');
+  src: local('Lato Bold Italic'),
+  local('LatoBoldItalic'),
+  url('#{$rb-font-path}/LatoBoldItalic.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/LatoBoldItalic.woff') format('woff');
+
+}
+

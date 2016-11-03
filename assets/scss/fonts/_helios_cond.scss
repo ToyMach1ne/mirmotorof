@@ -1,0 +1,49 @@
+$rb-font-path: '../fonts' !default;
+
+@font-face {
+  font-family: 'Helios Cond';
+  font-weight: 400;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/HeliosCondRegular.eot');
+  src: local('HeliosCond'),
+  local('HeliosCondRegular'),
+  url('#{$rb-font-path}/HeliosCondRegular.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/HeliosCondRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helios Cond';
+  font-weight: 400;
+  font-style: italic;
+
+  src: url('#{$rb-font-path}/HeliosCondItalic.eot');
+  src: local('HeliosCond'),
+  local('HeliosCondItalic'),
+  url('#{$rb-font-path}/HeliosCondItalic.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/HeliosCondItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helios Cond';
+  font-weight: 800;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/HeliosCondBold.eot');
+  src: local('HeliosCond'),
+  local('HeliosCondBold'),
+  url('#{$rb-font-path}/HeliosCondBold.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/HeliosCondBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helios Cond';
+  font-weight: 800;
+  font-style: italic;
+
+  src: url('#{$rb-font-path}/HeliosCondBoldItalic.eot');
+  src: local('HeliosCond'),
+  local('HeliosCondBoldItalic'),
+  url('#{$rb-font-path}/HeliosCondBoldItalic.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/HeliosCondBoldItalic.woff') format('woff');
+}
