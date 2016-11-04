@@ -68,7 +68,6 @@
                   </div>
                   <?php endwhile; endif; ?>
                   <?php wp_reset_query(); ?>
-                  <?php wp_reset_query(); ?>
                   <div class="col-md-12 blog-button">
                   <?php $category_id = get_cat_ID( 'Blog' ); $category_link = get_category_link( $category_id ); ?>
                     <a href="<?php echo $category_link; ?>">viev more</a>

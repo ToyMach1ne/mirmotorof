@@ -1,37 +1,45 @@
-<?php get_header(); ?>
-  <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-      <h1 class="single-title inner-title"><?php the_title(); ?></h1>
-      <?php if ( has_post_thumbnail()) :?>
-        <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-          <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-        </a>
-      <?php endif; ?><!-- /post thumbnail -->
-
-      <span class="date"><?php the_time('d F Y'); ?> <?php the_time('H:i'); ?></span>
-      <span class="author"><?php _e( 'Published by', 'wpeasy' ); ?> <?php the_author_posts_link(); ?></span>
-      <span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'wpeasy' ), __( '1 Comment', 'wpeasy' ), __( '% Comments', 'wpeasy' )); ?></span><!-- /post details -->
-
-      <?php the_content(); ?>
-
-      <?php the_tags( __( 'Tags: ', 'wpeasy' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-      <p><?php _e( 'Categorised in: ', 'wpeasy' ); the_category(', '); // Separated by commas ?></p>
-
-      <p><?php _e( 'This post was written by ', 'wpeasy' ); the_author(); ?></p>
-
-      <?php edit_post_link(); ?>
-
-      <?php comments_template(); ?>
-
-    </article>
-  <?php endwhile; else: ?>
-    <article>
-
-      <h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
-
-    </article>
-  <?php endif; ?>
-<?php get_sidebar(); ?>
+<?php  get_header(); ?>
+  <section role="main">
+          <h1 class="page-title"><?php the_title(); ?></h1>
+          <div class="articles-block">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <?php  $image = get_field('single_img'); if( !empty($image) ): ?>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                  <?php endif; ?>
+                </div>
+                <div class="col-md-6">
+                  <h6><?php the_title(); ?></h6>
+                  <p><?php the_post(); the_content(); ?></p>
+                </div>
+              </div>
+            </div>
+          </div><!-- articles-block -->
+          <div class="article-slider">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div id="owl-demo">
+                  <?php query_posts("showposts=100&cat=3"); ?>
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <div class="item">
+                    <?php if ( has_post_thumbnail()) :?>
+                       <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                         <?php the_post_thumbnail('normal'); ?>
+                       </a>
+                    <?php endif; ?><!-- /post thumbnail -->
+                      <h6><?php the_title(); ?></h6>
+                      <p class="article-descr"><?php the_excerpt(); ?></p>
+                      <p class="article-date"><?php the_time('j F Y'); ?><a href="<?php the_permalink(); ?>"><span>подробнее</span></a></p>
+                    </div>
+                    <?php endwhile; endif; ?>
+                    <?php wp_reset_query(); ?>
+                  </div>
+                </div>
+              </div><!-- row -->
+            </div><!-- container -->
+          </div><!-- article-slider -->
+  </section><!-- /section -->
+</div><!-- /wrapper -->
 <?php get_footer(); ?>
