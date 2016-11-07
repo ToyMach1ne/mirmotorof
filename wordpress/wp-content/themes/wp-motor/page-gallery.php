@@ -20,22 +20,14 @@
             <div class="container">
               <div class="row">
                 <h5><?php the_field('gallery_title'); ?></h5>
+                <?php if( have_rows('galeery_content') ): while ( have_rows('galeery_content') ) : the_row();
+                    // vars
+                    $image = get_sub_field('gal-cont-img');?>
                     <div class="col-md-3">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/slider-img-1.png" height="165" width="270" alt="Owl Image">
-                      <h6>Обработка сёдел клапанов</h6>
+                      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                      <h6><?php the_sub_field('gal-cont-ex'); ?></h6>
                     </div>
-                    <div class="col-md-3">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/slider-img-2.png" height="165" width="270" alt="Owl Image">
-                      <h6>Обработка фасок клапанов по Американской технологии Newway</h6>
-                    </div>
-                    <div class="col-md-3">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/slider-img-3.png" height="165" width="270" alt="Owl Image">
-                      <h6>Обработка фасок сёдел клапанов по Американской технологии Rotler</h6>
-                    </div>
-                    <div class="col-md-3">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/slider-img-4.png" height="165" width="270" alt="Owl Image">
-                      <h6>Визуальная дефектовка коленчатого вала на наличие трещин</h6>
-                    </div>
+                    <?php endwhile; endif; ?>
               </div><!-- row -->
             </div><!-- container -->
           </div><!-- article-slider -->
