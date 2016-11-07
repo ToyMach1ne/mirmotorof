@@ -338,7 +338,9 @@ nav {
         }
       }
       }
-
+    }
+    .invalid {
+    padding-left: 220px;
     }
   }
 }
@@ -877,7 +879,108 @@ footer {
     }
   }
 }
+.category-page {
+  font-family: 'Lato';
+  .single-block {
+    border-bottom: 1px solid grey;
+  padding:15px 0;
 
+    .feature-img {
+      img {
+        float: left;
+    padding-right: 20px;
+      }
+    }
+    .inner-title {
+      a {
+    font-size: 18px;
+    font-weight: 800;
+    color:$orange;
+  }
+    }
+    .date {
+      padding-top: 10px;
+    }
+  }
+}
+
+.archive {
+  article {
+  .pagination {
+padding-bottom: 160px;
+   background-image: url(../img/blog-footer-bg.png);
+  background-repeat: no-repeat;
+  background-position-y: 180px;
+  height: 50px;
+  text-align: center;
+  margin: 30px 0;
+  .page-numbers {
+    height: 30px;
+    width: 30px;
+    border: 1px solid grey;
+        line-height: 1.3;
+        font-size: 22px;
+      font-weight: 400;
+      color:$orange;
+      padding: 0 7px;
+        &:hover {
+          background-color: $orange;
+          text-decoration: none;
+            color:#477dca;
+        }
+  }
+  }
+}
+}
+.error404 {
+  font-family: 'Lato';
+  article {
+      background-image: url(../img/blog-footer-bg.png);
+      background-repeat: no-repeat;
+      background-position-y: 520px;
+    height: 700px;
+    p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+ }
+      h2 {
+        text-align: center;
+        a {
+      font-size: 20px;
+      font-weight: 800;
+      color:$orange;
+        }
+    }
+.glass1 {
+      width: 674px;
+    height: 549px;
+    left: -40px;
+    z-index: 110;
+    top: 50%;
+    background-image: url(../img/glass1.png);
+    position: absolute;
+  }
+  .glass2 {
+        width: 262px;
+    height: 285px;
+    right: 7%;
+    z-index: 109;
+    top: 30%;
+    background-image: url(../img/glass2.gif);
+    position: absolute;
+  }
+    .glass3 {
+        width: 262px;
+    height: 285px;
+    left: 0;
+    z-index: 109;
+    top: 15%;
+    background-image: url(../img/glass2.gif);
+    position: absolute;
+  }
+}
+}
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_roboto';
 @import 'fonts/lato';
