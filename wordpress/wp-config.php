@@ -1,7 +1,7 @@
 <?php
-define('DB_NAME', 'DBNAME');
-define('DB_USER', 'DBUSER');
-define('DB_PASSWORD', 'DBPASS');
+define('DB_NAME', 'mirmotorof');
+define('DB_USER', 'mirmotorof');
+define('DB_PASSWORD', 'mirmotorof');
 
 define('DB_HOST', 'localhost');
 

@@ -21,3 +21,38 @@ if (typeof jQuery === 'undefined') {
   console.log('jQuery has loaded');
 }
 // Place any jQuery/helper plugins in here.
+
+
+$(document).ready(function() {
+
+  $("#owl-demo").owlCarousel({
+
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+
+  });
+
+});
+
+
+$(document).ready(function() {
+
+  $("#owl-demo-gallery").owlCarousel({
+      autoPlay : true,
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1,
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+  });
+
+});
