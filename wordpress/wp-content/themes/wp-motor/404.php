@@ -6,9 +6,5 @@
     <p>Упс...Кажется вы сломали сайт. Но вы можете вернутся на <h2><a href="<?php echo home_url(); ?>">Главную страницу</a></h2></p>
     <div class="glass1"></div>
 
-    <div class="glass2"></div>
-
-    <div class="glass3"></div>
-
   </article>
 <?php get_footer(); ?>

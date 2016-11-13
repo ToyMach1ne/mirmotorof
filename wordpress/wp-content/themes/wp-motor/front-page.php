@@ -12,7 +12,7 @@
               <span class="job-img">
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
               </span>
-              <p><?php the_sub_field('black_text'); ?></p>
+              <?php the_sub_field('black_text'); ?>
             </div>
           <?php endwhile; endif; ?>
         </div>

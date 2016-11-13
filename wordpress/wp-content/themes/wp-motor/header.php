@@ -17,6 +17,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+
   <?php wp_head(); ?>
 
 </head>
@@ -29,9 +30,14 @@
       <div class="row header-items">
 
         <div class="logo col-md-2">
-          <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-          </a>
+          <?php if ( is_page('4') ){ } else { ?>
+            <a href="<?php echo home_url(); ?>">
+              <?php  } ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
+              <?php if ( is_page('4') ){
+              } else { ?>
+            </a>
+          <?php } ?>
         </div><!-- /logo -->
 
         <div class="col-md-5">
@@ -41,12 +47,12 @@
         </div><!-- col-md-5 -->
 
         <div class="col-md-5 header-phones">
-          <div class="header-phone1">
-            <p><span><?php the_field('pre_phone1' , 4); ?></span><?php the_field('phone1' , 4); ?></p>
-          </div>
-          <div class="header-phone2">
-            <p><span><?php the_field('pre_phone2' , 4); ?></span><?php the_field('phone2' , 4); ?></p>
-          </div>
+          <a class="header-phone--top" href="tel:+38<?php the_field('pre_phone1' , 4); ?><?php the_field('phone1' , 4); ?>">
+            <span><?php the_field('pre_phone1' , 4); ?></span><?php the_field('phone1' , 4); ?>
+          </a>
+          <a class="header-phone--bott" href="tel:+38<?php the_field('pre_phone2' , 4); ?><?php the_field('phone2' , 4); ?>">
+            <span><?php the_field('pre_phone2' , 4); ?></span><?php the_field('phone2' , 4); ?>
+          </a>
         </div><!-- col-md-5 -->
 
       </div><!-- /.row -->
