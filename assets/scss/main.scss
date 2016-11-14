@@ -127,18 +127,21 @@ header {
 }
 nav {
   font-family: 'Helios Cond';
-
+    display: flex;
+    justify-content: space-around;
   padding-bottom: 15px;
+      margin-bottom: -5px;
   ul {
     @extend .justify-child;
     @extend .clearfix;
+        padding-right: 13px;
     li {
       display: inline-block;
 
-      padding: 0 20px;
+      padding: 0 18px;
       a {
         font-size: 16px;
-
+        text-transform: uppercase;
         color: #fff;
         &:hover {
           text-decoration: none;
@@ -166,13 +169,14 @@ nav {
 
     display: flex;
 
-    justify-content: space-around;
+    justify-content: flex-end;
     .header-phone1 {
       width: 150px;
+          margin-right: 10px;
       p {
         font-size: 30px;
         font-weight: 800;
-
+        margin:0;
         color: #fff;
         span {
           font-size: 22px;
@@ -322,7 +326,7 @@ nav {
 
         width: 170px;
         height: 50px;
-        margin-top: 25px;
+        margin-top: 18px;
         margin-left: 165px;
 
         color: #fff;
