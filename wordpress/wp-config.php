@@ -1,9 +1,9 @@
 <?php
-define('DB_NAME', 'mirmotorof');
-define('DB_USER', 'mirmotorof');
-define('DB_PASSWORD', 'mirmotorof');
+define('DB_NAME', 'p284179_avtoza');
+define('DB_USER', 'p284179_avtoza');
+define('DB_PASSWORD', 'D5EJGinii9');
 
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'p284179.mysql.ihc.ru');
 
 define('DISABLE_WP_CRON', true);
 define('FS_METHOD', 'direct');
@@ -14,7 +14,7 @@ define('CACHE_WRITE_WHITELIST','_transient|limit_login_'); // do not reset cache
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
-$table_prefix  = 'gihuc_';
+$table_prefix  = 'astdj_';
 
 define('WPLANG', 'ru_RU');
 define('DISALLOW_FILE_EDIT', true);
