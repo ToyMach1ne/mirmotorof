@@ -107,6 +107,18 @@ header {
     }
   }
 }
+.page-title {
+  font-family: 'Helios Cond';
+  font-size: 38px;
+  font-weight: 800;
+
+  padding-bottom: 40px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ff8d00;
+}
 nav {
   font-family: 'Helios Cond';
 
@@ -316,8 +328,9 @@ section {
 
   color: $orange;
   a {
-    color: $orange;
     text-decoration: none;
+
+    color: $orange;
   }
 }
 .our-job {
@@ -607,9 +620,6 @@ section {
 }
 .looper {
   @extend .clearfix;
-  .inner-title {
-
-  }
 }
 .articles-block {
   .row {
@@ -802,6 +812,80 @@ section {
     color: $orange;
   }
 }
+.single {
+  font-family: 'Lato' ;
+  .articles-block {
+    h1 {
+      font-size: 160%;
+    }
+    h2 {
+      font-size: 140%;
+    }
+    h3 {
+      font-size: 130%;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 200;
+
+      text-align: justify;
+    }
+    ul {
+      padding-left: 40px;
+      margin-bottom: 15px;
+      li {
+        padding:5px;
+        list-style-type: decimal;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    ol {
+      padding-left: 40px;
+          margin-bottom: 15px;
+      li {
+        list-style-type: circle;
+        padding:5px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    blockquote {
+    background-color: #cecccc;
+    margin: 10px;
+    padding: 30px 20px 20px 20px;
+    border-radius: 15px;
+    &:before {
+      display: block;
+      content:'\f10d';
+      @extend .fa;
+      color:$orange;
+      position: relative;
+      left: 48%;
+      padding-bottom: 15px;
+    }
+    }
+    table {
+      margin: 15px 0;
+      tr {
+        td {
+          font-size: 14px;
+          font-weight: 400;
+
+          text-align: center;
+
+          border: 1px solid grey;
+        }
+      }
+    }
+  }
+}
+
+
+
+
 
 
 
@@ -844,6 +928,114 @@ footer {
       line-height: 2.9;
 
       color: #fff;
+    }
+  }
+  .footer-contacts {
+    height: 100px;
+
+    background-color: #262727;
+    .footer-phone--top,
+    .footer-phone--bott {
+      font-size: 30px;
+      font-weight: 800;
+
+      display: block;
+
+      width: 150px;
+      width: 100%;
+      padding: 10px 0;
+
+      -webkit-transition: all .8s;
+              transition: all .8s;
+
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+
+        color: #ff8d00;
+      }
+    }
+    .footer-adress {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 8;
+
+      text-align: center;
+
+      color: #fff;
+    }
+    .social-block {
+      height: 100px;
+      .footer-social {
+        display: flex;
+
+        height: 100%;
+
+        justify-content: center;
+        align-items: center;
+        li {
+          line-height: 1.5;
+
+          width: 40px;
+          height: 40px;
+          margin: 0 5px;
+
+          text-align: center;
+
+          color: #fff;
+          border-radius: 50%;
+          background-color: $orange;
+          &:hover {
+            background-color: #262727;
+            a {
+              color: $orange;
+            }
+          }
+          a {
+            font-size: 28px;
+
+            cursor: pointer;
+
+            color: #262727;
+          }
+        }
+        .vk {
+          &:before {
+            display: block;
+
+            content: '\f189';
+
+            @extend .fa;
+          }
+        }
+        .fb {
+          &:before {
+            display: block;
+
+            content: '\f09a';
+
+            @extend .fa;
+          }
+        }
+        .ggl {
+          &:before {
+            display: block;
+
+            content: '\f1a0';
+
+            @extend .fa;
+          }
+        }
+        .twit {
+          &:before {
+            display: block;
+
+            content: '\f099';
+
+            @extend .fa;
+          }
+        }
+      }
     }
   }
 }

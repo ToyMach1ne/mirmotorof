@@ -1,7 +1,5 @@
 <?php  get_header(); ?>
   <section role="main">
-
-
     <div class="articles-block">
       <div class="container">
         <div class="row">
