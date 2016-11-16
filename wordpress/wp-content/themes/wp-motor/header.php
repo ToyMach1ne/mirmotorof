@@ -19,7 +19,6 @@
   <![endif]-->
 
   <?php wp_head(); ?>
-
 </head>
 <body <?php body_class(); ?>>
 <!-- wrapper -->
@@ -63,7 +62,7 @@
           <p><?php the_field('undertitle_descr' , 4); ?></p>
         </div>
         <div class="col-md-6 second-half">
-          <h6>Book a consultation:</h6>
+          <h6>Заказать консультацию:</h6>
           <?php echo do_shortcode('[contact-form-7 id="27" title="header form"]'); ?>
         </div>
       </div><!-- second-header-row -->
