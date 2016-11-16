@@ -1,5 +1,5 @@
   <footer role="contentinfo">
-<div id="map" class="goole-map" style="height: 450px;"></div>
+<div id="map" class="goole-map"></div>
     <?php get_sidebar(); ?>
 
   </footer><!-- /footer -->
