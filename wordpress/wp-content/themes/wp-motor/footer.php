@@ -1,8 +1,7 @@
   <footer role="contentinfo">
 <div id="map" class="goole-map"></div>
-    <?php get_sidebar(); ?>
 
-  </footer><!-- /footer -->
+<?php if ( is_page('10') ){ ?>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzmXGEAtAn0khnJT-cd207GDHTHcU8H78&callback=initMap">
   </script>
@@ -18,7 +17,12 @@
           map: map
         });
       }
-    </script>
+    </script> <?php } else { ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="map-img">
+              <?php  } ?>
+          <?php get_sidebar(); ?>
+  </footer><!-- /footer -->
+
   <?php wp_footer(); ?>
 
 </body>
