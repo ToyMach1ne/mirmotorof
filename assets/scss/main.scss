@@ -150,8 +150,12 @@ nav {
   }
 }
 .header-items {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
-
   align-items: flex-end;
   justify-content: space-around;
   .header-phones {
@@ -175,7 +179,7 @@ nav {
         font-size: 22px;
         font-weight: 800;
 
-        display: block;
+        display: inline-block;
 
         width: 100%;
         padding-bottom: 5px;
@@ -927,7 +931,7 @@ footer {
     @extend .dblock;
   }
   .goole-map {
-    display: none;
+    display: none !important;
     width: 100%;
     height: 450px;
   }
@@ -1059,15 +1063,7 @@ footer {
     article{
       background-image: url(../img/404.jpg);
     height: 500px;
-    .ctitle {
-      font-family: Helios Cond;
-    font-size: 38px;
-    font-weight: 800;
-    padding-bottom: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ff8d00;
-    }
+
     p {
       font-size: 18px;
       font-weight: 400;
@@ -1095,6 +1091,15 @@ footer {
     display: block;
   }
 }
+    .ctitle {
+      font-family: Helios Cond;
+    font-size: 38px;
+    font-weight: 800;
+    padding-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff8d00;
+    }
 @media (max-width:980px) {
   .error404 {
     article {
