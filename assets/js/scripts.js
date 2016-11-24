@@ -1573,3 +1573,24 @@ $(document).ready(function() {
     singleItem: true
   });
 });
+
+
+$('.super-menu').on('click', function(event) {
+  var $navMenu = $('.second-half');
+
+  if ($(this).hasClass('super-menu-opened')) {
+    $navMenu.removeClass('headnav-opened');
+    $(this).removeClass('super-menu-opened')
+    $('.close-mobile-menu').removeClass('close-mobile-menu--show')
+  } else {
+    $navMenu.addClass('headnav-opened');
+    $(this).addClass('super-menu-opened')
+    $('.close-mobile-menu').addClass('close-mobile-menu--show')
+  }
+})
+$('.close-mobile-menu').on('click', function(event) {
+  $('.second-half').removeClass('headnav-opened');
+  $('.super-menu').removeClass('super-menu-opened')
+  $(this).removeClass('close-mobile-menu--show')
+
+})

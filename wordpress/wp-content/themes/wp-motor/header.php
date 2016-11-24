@@ -61,7 +61,9 @@
           <h4><?php the_field('header_title' , 4); ?></h4>
           <p><?php the_field('undertitle_descr' , 4); ?></p>
         </div>
+        <a href="#" class="super-menu">Заказать консультацию</a>
         <div class="col-md-6 second-half">
+        <a href="#" class="close-mobile-menu close-mobile-menu--show">X</a>
           <h6>Заказать консультацию:</h6>
           <?php echo do_shortcode('[contact-form-7 id="27" title="header form"]'); ?>
         </div>

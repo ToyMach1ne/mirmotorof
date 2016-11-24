@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <article>
+  <article class='blog-wrapp'>
 
     <h1 class="cat-title inner-title"><?php the_category(', '); ?></h1>
     <?php get_template_part('loop'); ?>

@@ -1,5 +1,5 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
-  <section role="main">
+  <section role="main" class="main-page-wrapp">
 
     <h1 class="page-title"><?php the_field('fp_title', 4); ?></h1>
 
@@ -9,10 +9,12 @@
           <?php if( have_rows('job_block', 4) ): while ( have_rows('job_block', 4) ) : the_row();
           $image = get_sub_field('job_img');?>
             <div class="col-md-3">
+            <a href="<?php the_sub_field('pagelink'); ?>">
               <span class="job-img">
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
               </span>
               <?php the_sub_field('black_text'); ?>
+              </a>
             </div>
           <?php endwhile; endif; ?>
         </div>
