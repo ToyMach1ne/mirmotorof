@@ -4,8 +4,7 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" width=1200, initial-scale="1">
   <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
 
 
@@ -19,6 +18,27 @@
   <![endif]-->
 
   <?php wp_head(); ?>
+
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window,document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '1072183672865696');
+	fbq('track', 'PageView');
+	</script>
+	<noscript>
+	<img height="1" width="1"
+	src="https://www.facebook.com/tr?id=1072183672865696&ev=PageView
+	&noscript=1"/>
+	</noscript>
+	<!-- End Facebook Pixel Code -->
 </head>
 <body <?php body_class(); ?>>
 <!-- wrapper -->
@@ -28,7 +48,7 @@
     <div class="container">
       <div class="row header-items">
 
-        <div class="logo col-md-2">
+        <div class="logo col-xs-2">
           <?php if ( is_page('4') ){ } else { ?>
             <a href="<?php echo home_url(); ?>">
               <?php  } ?>
@@ -39,37 +59,37 @@
           <?php } ?>
         </div><!-- /logo -->
 
-        <div class="col-md-5">
-          <nav class="nav__header col-md-12" role="navigation">
+        <div class="col-xs-5">
+          <nav class="nav__header col-xs-12" role="navigation">
             <?php wpeHeadNav(); ?>
           </nav><!-- /nav -->
-        </div><!-- col-md-5 -->
+        </div><!-- col-xs-5 -->
 
-        <div class="col-md-5 header-phones">
+        <div class="col-xs-5 header-phones">
           <a class="header-phone--top" href="tel:+38<?php the_field('pre_phone1' , 4); ?><?php the_field('phone1' , 4); ?>">
             <span><?php the_field('pre_phone1' , 4); ?></span><?php the_field('phone1' , 4); ?>
           </a>
           <a class="header-phone--bott" href="tel:+38<?php the_field('pre_phone2' , 4); ?><?php the_field('phone2' , 4); ?>">
             <span><?php the_field('pre_phone2' , 4); ?></span><?php the_field('phone2' , 4); ?>
           </a>
-        </div><!-- col-md-5 -->
+        </div><!-- col-xs-5 -->
 
       </div><!-- /.row -->
 
       <div class="row second-header-row">
-        <div class="col-md-6 first-half">
+        <div class="col-xs-6 first-half">
           <h4><?php the_field('header_title' , 4); ?></h4>
           <p><?php the_field('undertitle_descr' , 4); ?></p>
         </div>
         <a href="#" class="super-menu">Заказать консультацию</a>
-        <div class="col-md-6 second-half">
+        <div class="col-xs-6 second-half">
         <a href="#" class="close-mobile-menu close-mobile-menu--show">X</a>
           <h6>Заказать консультацию:</h6>
           <?php echo do_shortcode('[contact-form-7 id="27" title="header form"]'); ?>
         </div>
       </div><!-- second-header-row -->
 
-      <div class="col-md-12 orange-bg">
+      <div class="col-xs-12 orange-bg">
         <p><?php the_field('last_header_text' , 4); ?></p>
       </div>
 

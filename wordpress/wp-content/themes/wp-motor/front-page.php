@@ -8,7 +8,7 @@
         <div class="row">
           <?php if( have_rows('job_block', 4) ): while ( have_rows('job_block', 4) ) : the_row();
           $image = get_sub_field('job_img');?>
-            <div class="col-md-3">
+            <div class="col-xs-3">
             <a href="<?php the_sub_field('pagelink'); ?>">
               <span class="job-img">
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
@@ -25,12 +25,12 @@
       <h4><?php the_field('about_title' , 4); ?></h4>
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <?php $image = get_field('about_img', 4); if( !empty($image) ): ?>
               <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
             <?php endif; ?>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <h6><?php the_field('about_subtitle' , 4); ?></h6>
             <p><?php the_field('about_text' , 4); ?></p>
             <p><?php the_field('about_text2' , 4); ?></p>
@@ -47,7 +47,7 @@
           <?php if( have_rows('our_advantages', 4) ): while ( have_rows('our_advantages', 4) ) : the_row();
           // vars
           $image = get_sub_field('adv_img');?>
-            <div class="col-md-4">
+            <div class="col-xs-4">
               <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
               <p><?php the_sub_field('avd_title'); ?>.</p>
             </div>
@@ -62,7 +62,7 @@
           <h4><?php the_field('blog_title' , 4); ?></h4>
           <?php query_posts("showposts=4&cat=3"); ?>
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <div class="col-md-3">
+          <div class="col-xs-3">
             <?php if ( has_post_thumbnail()) :?>
              <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                <?php the_post_thumbnail('normal'); ?>
@@ -74,7 +74,7 @@
           </div>
           <?php endwhile; endif; ?>
           <?php wp_reset_query(); ?>
-          <div class="col-md-12 blog-button">
+          <div class="col-xs-12 blog-button">
           <?php $category_id = get_cat_ID( 'Blog' ); $category_link = get_category_link( $category_id ); ?>
             <a href="<?php echo $category_link; ?>">Больше статей</a>
           </div>

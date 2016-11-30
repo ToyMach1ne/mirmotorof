@@ -1594,3 +1594,22 @@ $('.close-mobile-menu').on('click', function(event) {
   $(this).removeClass('close-mobile-menu--show')
 
 })
+  function mobileFriendly() {
+    setTimeout(function() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var ww = (document.documentElement.clientWidth < window.screen.width) ? jQuery(window).width() : window.screen.width; //get proper width
+        var mw = 1200;
+        //alert ("width" + ww);
+        var ratio = ww / mw; //calculate ratio
+        //alert ("ratio: " + ratio);
+        if (ratio < 1) { //smaller than minimum size
+          jQuery("meta[name='viewport']").attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + mw);
+        } else { //regular size
+          jQuery("meta[name='viewport']").attr('content', 'initial-scale=1.0, maximum-scale=2, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+        }
+      }
+    }, 600);
+  }
+  jQuery(document).ready(function() {
+    mobileFriendly()
+  });
