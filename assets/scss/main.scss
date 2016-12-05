@@ -11,14 +11,16 @@
 @import 'super_sprite';
 @import 'owl.carousel';
 @import 'owl.theme';
-
+html{
+  min-width: 1200px;
+}
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: $fnorm;
   line-height: $base-line-height;
 
-  min-width: 320px;
+min-width: 980px;
 
   transition: $base-transition;
 
