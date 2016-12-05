@@ -2,7 +2,7 @@
   <div id="post-<?php the_ID(); ?>" <?php post_class('looper'); ?>>
     <div class="container category-page">
       <div class="row">
-        <div class="col-md-12 single-block">
+        <div class="col-xs-12 single-block">
           <a rel="nofollow" class="feature-img" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <?php if ( has_post_thumbnail()) :
               the_post_thumbnail('medium');

@@ -4,7 +4,7 @@
           <div class="gallery">
             <div class="container">
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-xs-12">
                   <div id="owl-demo-gallery" class="owl-carousel owl-theme">
                   <?php if( have_rows('gallery_slider') ): while ( have_rows('gallery_slider') ) : the_row();
                     // vars
@@ -23,7 +23,7 @@
                 <?php if( have_rows('galeery_content') ): while ( have_rows('galeery_content') ) : the_row();
                     // vars
                     $image = get_sub_field('gal-cont-img');?>
-                    <div class="col-md-3">
+                    <div class="col-xs-3">
                       <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
                       <h6><?php the_sub_field('gal-cont-ex'); ?></h6>
                     </div>
