@@ -1383,7 +1383,93 @@ aside {
     }
   }
 }
+@media (max-width:360px) {
+  html, body {
+    width: 360px !important;
+    .container {
+    width: 100% !important;
 
+    }
+    .logo  {
+      display: none;
+    }
+    .second-header-row {
+      .first-half {
+        p {
+          width: 300px;
+        }
+      }
+      .super-menu {
+        top: 80%;
+      }
+    }
+    .orange-bg {
+          margin-top: 81px;
+      p {
+        width: 300px;
+      }
+    }
+    .our-job {
+      .job-img {
+        width: 100% !important;
+      }
+      .col-xs-3 {
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+    .about-us {
+      p {
+        font-size: 14px;
+      }
+    }
+    .advantages {
+      .col-xs-4 {
+        p {
+          color:#fff;
+          font-size: 13px;
+          padding-top: 10px;
+    text-align: center;
+        }
+      }
+    }
+    .blog {
+      .col-xs-3 {
+        h6 {
+          font-size: 14px;
+          overflow: hidden;
+        }
+        p {
+          font-size: 10px;
+        }
+      }
+      .blog-button {
+        a {
+          &:before {
+                left: 20%;
+          }
+        }
+      }
+    }
+    footer {
+      .search {
+        input {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:320px) {
+  html, body {
+    width: 320px !important;
+    .container {
+    width: 100% !important;
+
+    }
+}
+}
 /* END OF MEDIA QUERY */
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_roboto';
