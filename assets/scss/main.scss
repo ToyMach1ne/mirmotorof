@@ -1257,7 +1257,7 @@ aside {
   display: none;
 }
 /* MEDIA QUERY */
-
+/*
 @media (max-width:2500px) {
   .second-header-row {
     .super-menu {
@@ -1382,8 +1382,8 @@ aside {
       }
     }
   }
-}
-@media (max-width:360px) {
+} */
+/* @media (max-width:360px) {
   html, body {
     width: 360px !important;
     .container {
@@ -1401,6 +1401,27 @@ aside {
       }
       .super-menu {
         top: 80%;
+      }
+      .headnav-opened {
+        h6 {
+          top: 20%;
+          left: 25%;
+          &:before {
+            right: -70px;
+            top: 27px;
+          }
+        }
+        .wpcf7 {
+          .wpcf7-form {
+          left: 4%;
+          p {
+            .header-button {
+                  margin-left: 82px;
+            }
+          }
+        }
+        }
+
       }
     }
     .orange-bg {
@@ -1468,8 +1489,15 @@ aside {
     width: 100% !important;
 
     }
+.second-header-row .headnav-opened .wpcf7 .wpcf7-form, .second-header-row .headnav-opened .wpcf7 .wpcf7-form {
+      left: 0;
 }
+.second-header-row .headnav-opened .close-mobile-menu--show {
+      right: 13%;
 }
+
+}
+} */
 /* END OF MEDIA QUERY */
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_roboto';

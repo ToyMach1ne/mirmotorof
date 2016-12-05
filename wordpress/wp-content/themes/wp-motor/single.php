@@ -3,7 +3,7 @@
     <div class="articles-block">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-xs-12">
             <h1 class="page-title"><?php the_title(); ?></h1>
             <p><?php the_post(); the_content(); ?></p>
           </div>
@@ -14,7 +14,7 @@
     <div class="article-slider">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-xs-12">
             <div id="owl-demo">
               <?php query_posts("showposts=100&cat=3"); ?>
               <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

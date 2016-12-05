@@ -4,7 +4,7 @@
     <div class="contact-page">
       <div class="container">
        <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
           <p>телефоны:
             <a class="header-phone--top" href="tel:+38<?php the_field('pre_phone1' , 4); ?><?php the_field('phone1' , 4); ?>">
               <span><?php the_field('contacts-phone1'); ?></span><span><?php the_field('contacts-phone2'); ?></span><span><?php the_field('contacts-phone3'); ?>

@@ -3,7 +3,7 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="container page-content">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
           <h1 class="page-title inner-title"><?php the_title(); ?></h1>
       <?php the_content(); ?>
       <?php edit_post_link(); ?>
