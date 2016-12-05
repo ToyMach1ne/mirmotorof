@@ -237,12 +237,12 @@ nav {
       font-size: 22px;
       font-weight: 400;
 
-      margin-right: 92px;
+      margin-right: 104px;
 
       color: #fff;
       &:before {
         position: absolute;
-        right: 15px;
+        right: 30px;
 
         width: 70px;
         height: 20px;
@@ -386,7 +386,7 @@ section {
 
     color: $orange;
   }
-  .col-md-3 {
+  .col-xs-3 {
     &:hover {
       img {
         transform: scale(1.25);
@@ -470,7 +470,7 @@ section {
 
     color: $orange;
   }
-  .col-md-4 {
+  .col-xs-4 {
     display: flex;
     flex-direction: column;
 
@@ -506,7 +506,7 @@ section {
 
     color: $orange;
   }
-  .col-md-3 {
+  .col-xs-3 {
     font-family: 'Lato' ;
 
     display: flex;
@@ -640,7 +640,7 @@ section {
 
     justify-content: center;
     align-items: center;
-    .col-md-6 {
+    .col-xs-6 {
       h6 {
         font-family: 'Helios Cond';
         font-size: 22px;
